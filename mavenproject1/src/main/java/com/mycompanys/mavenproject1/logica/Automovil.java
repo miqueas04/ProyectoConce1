@@ -6,6 +6,7 @@ public class Automovil {
     
     private int id;
     private String modelo;
+    private String motor;
     private String marca;
     private String color;
     private String patente;
@@ -16,9 +17,12 @@ public class Automovil {
     public Automovil() {
     }
 
-    public Automovil(int id, String modelo, String marca, String color, String patente, int cantPuertas) {
+   
+
+    public Automovil(int id, String modelo,String motor, String marca, String color, String patente, int cantPuertas) {
         this.id = id;
         this.modelo = modelo;
+        this.motor = motor;
         this.marca = marca;
         this.color = color;
         this.patente = patente;
@@ -75,6 +79,13 @@ public class Automovil {
 
     public void setCantPuertas(int cantPuertas) {
         this.cantPuertas = cantPuertas;
+    }
+     public String getMotor() {
+        return motor;
+    }
+
+    public void setMotor(String motor) {
+        this.motor = motor;
     }
     
     
