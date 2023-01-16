@@ -1,9 +1,13 @@
 
 package com.mycompanys.mavenproject1.igu;
 
+import com.mycompanys.mavenproject1.logica.ControladoraL;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+
 
 public class AltaAutomoviles extends javax.swing.JFrame {
-
+  ControladoraL controladora = new ControladoraL();
     
     public AltaAutomoviles() {
         initComponents();
@@ -250,7 +254,22 @@ public class AltaAutomoviles extends javax.swing.JFrame {
     }//GEN-LAST:event_txtMotorActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-        // TODO add your handling code here:
+        
+     String modelo = txtModelo.getText();
+     String motor = txtMotor.getText();
+     String marca = txtMarca.getText();
+     String color = txtColor.getText();
+     String patente = txtPatente.getText();
+     // convertir una cadena en un entero
+     int cantPuertas = Integer.parseInt(txtCantPuer.getText());
+     
+     controladora.agregarAuto( modelo,  motor, marca, color, patente, cantPuertas);
+        
+     JOptionPane optionPane = new JOptionPane("Se guardo correctamente");
+        optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        JDialog dialog = optionPane.createDialog("Guardado exitoso");
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed

@@ -1,10 +1,18 @@
 
 package com.mycompanys.mavenproject1.logica;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-public class Automovil {
-    
+@Entity
+public class Automovil implements Serializable {
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
+    
     private String modelo;
     private String motor;
     private String marca;
