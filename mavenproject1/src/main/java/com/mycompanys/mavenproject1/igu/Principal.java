@@ -23,7 +23,7 @@ public class Principal extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnAlta = new javax.swing.JButton();
-        btnCnEdBj = new javax.swing.JButton();
+        btnConsulAuto = new javax.swing.JButton();
         btnSalr = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
@@ -42,11 +42,11 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        btnCnEdBj.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
-        btnCnEdBj.setText("Consulta, Edicion y Baja");
-        btnCnEdBj.addActionListener(new java.awt.event.ActionListener() {
+        btnConsulAuto.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        btnConsulAuto.setText("Consulta, Edicion y Baja");
+        btnConsulAuto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCnEdBjActionPerformed(evt);
+                btnConsulAutoActionPerformed(evt);
             }
         });
 
@@ -70,8 +70,8 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCnEdBj, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSalr, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnSalr, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnConsulAuto, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31))
@@ -90,7 +90,7 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(50, 50, 50)
                         .addComponent(btnAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCnEdBj, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnConsulAuto, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSalr, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(23, Short.MAX_VALUE))
@@ -124,9 +124,15 @@ public class Principal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnAltaActionPerformed
 
-    private void btnCnEdBjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCnEdBjActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCnEdBjActionPerformed
+    private void btnConsulAutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsulAutoActionPerformed
+        
+        ConsultaAutomovil consulauto = new ConsultaAutomovil();
+        consulauto.setVisible(true);
+        consulauto.setLocationRelativeTo(null);
+        
+        
+        
+    }//GEN-LAST:event_btnConsulAutoActionPerformed
 
     private void btnSalrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalrActionPerformed
         // TODO add your handling code here:
@@ -137,7 +143,7 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAlta;
-    private javax.swing.JButton btnCnEdBj;
+    private javax.swing.JButton btnConsulAuto;
     private javax.swing.JButton btnSalr;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

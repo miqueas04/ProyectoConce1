@@ -49,8 +49,8 @@
                   <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btnAlta" alignment="0" min="-2" pref="244" max="-2" attributes="0"/>
-                      <Component id="btnCnEdBj" min="-2" pref="244" max="-2" attributes="0"/>
                       <Component id="btnSalr" min="-2" pref="244" max="-2" attributes="0"/>
+                      <Component id="btnConsulAuto" min="-2" pref="244" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="36" max="32767" attributes="0"/>
                   <Component id="jLabel1" min="-2" pref="199" max="-2" attributes="0"/>
@@ -73,7 +73,7 @@
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           <Component id="btnAlta" min="-2" pref="61" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnCnEdBj" min="-2" pref="61" max="-2" attributes="0"/>
+                          <Component id="btnConsulAuto" min="-2" pref="61" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="btnSalr" min="-2" pref="61" max="-2" attributes="0"/>
                           <EmptySpace pref="23" max="32767" attributes="0"/>
@@ -108,7 +108,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAltaActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnCnEdBj">
+        <Component class="javax.swing.JButton" name="btnConsulAuto">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Emoji" size="18" style="0"/>
@@ -116,7 +116,7 @@
             <Property name="text" type="java.lang.String" value="Consulta, Edicion y Baja"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCnEdBjActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnConsulAutoActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnSalr">

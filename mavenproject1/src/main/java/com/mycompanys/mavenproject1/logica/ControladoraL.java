@@ -2,11 +2,12 @@
 package com.mycompanys.mavenproject1.logica;
 
 import com.mycompanys.mavenproject1.persistencia.ControladoraPersistencia;
+import java.util.List;
 
 
 public class ControladoraL {
     
- ControladoraPersistencia controlpersis = new ControladoraPersistencia();
+ ControladoraPersistencia controlPersis = new ControladoraPersistencia();
          
          
     public void agregarAuto(String modelo, String motor, String marca, String color, String patente, int cantPuertas) {
@@ -19,8 +20,20 @@ public class ControladoraL {
       auto.setMotor(motor);
       auto.setPatente(patente);
       
-        controlpersis.agregarAutomovil(auto);
+        controlPersis.agregarAutomovil(auto);
         
     }
+
+    public List<Automovil> traerAutos() {
+        
+       return controlPersis.traeAutos();
+    }
+
+    public void borrarAuto(int idAuto) {
+       controlPersis.borraAuto(idAuto);
+    }
+
+    
+    
     
 }
