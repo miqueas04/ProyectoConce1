@@ -5,7 +5,7 @@ import com.mycompanys.mavenproject1.logica.Automovil;
 import com.mycompanys.mavenproject1.logica.ControladoraL;
 import java.awt.Dialog;
 import java.util.List;
-import javax.swing.JDialog;
+//import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -66,6 +66,11 @@ public class ConsultaAutomovil extends javax.swing.JFrame {
         });
 
         btnModificar.setText("Modificar");
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarActionPerformed(evt);
+            }
+        });
 
         btnActualizar.setText("Actualizar");
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
@@ -202,6 +207,40 @@ public class ConsultaAutomovil extends javax.swing.JFrame {
 }
       
     }//GEN-LAST:event_btnEliminarActionPerformed
+
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+        
+   //controlamos que la tabla no este vacia 
+   if(tablaAutos.getRowCount() > 0){
+   //validar que se haya seleccionado un registro
+     if (tablaAutos.getSelectedRow() != -1){
+         
+    //obtener la id del auto
+    int idAuto = Integer.parseInt(String.valueOf(tablaAutos.getValueAt(tablaAutos.getSelectedRow(), 0)));     
+         
+    //Pasamos la id a la clase 
+         ModiAuto modi = new ModiAuto(idAuto);
+         modi.setVisible(true);
+         modi.setLocationRelativeTo(null);
+         
+         //Cerramos esta ventana
+         this.dispose();
+     }
+    else{
+      mostrarMensaje("No a seleccionado ningun registro para modificar","Error","Error al modificar");
+     
+     
+     }
+   } 
+   else {
+
+ mostrarMensaje("Tabla vacia","Error","No se puede modificar");
+   }
+        
+        
+        
+        
+    }//GEN-LAST:event_btnModificarActionPerformed
     
 
  
